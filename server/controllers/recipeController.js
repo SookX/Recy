@@ -1,18 +1,6 @@
 const Recipe = require('../schemas/recipeSchema')
-
-const errFunc = (res, err) => {
-    res.status(404).json({
-        message: "Something went wrong!",
-        data: err
-    })
-}
-
-const sucFunc = (code, res, data) => {
-    res.status(code).json({
-        message: "Success",
-        data: data
-    })
-}
+const sucFunc = require('../utils/sucFunc');
+const errFunc = require('../utils/errFunc');
 
 exports.addRecipe = async (req, res) => {
     try {
@@ -26,7 +14,10 @@ exports.addRecipe = async (req, res) => {
 
 exports.viewRecipes = async (req, res) => {
     try {
-        const recipes = await Recipe.find();
+        const sortType = req.query.sort;
+        delete req.query.sort;
+        const recipes = await Recipe.find(req.query).sort(sortType);
+
         sucFunc(200, res, recipes);
     }catch(err) {
         errFunc(res, err);
