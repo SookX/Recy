@@ -30,7 +30,7 @@ const Navbar = () => {
             <img className="w-9 h-9 rounded-full" src={userPhoto.src} alt="user photo" />
           </button>
           {dropdownOpen && (
-            <div className="absolute top-16 right-4 sm:right-6 md:right-8 lg:right-12 xl:right-16 2xl:right-20 w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+            <div className="z-50 absolute top-16 right-4 sm:right-6 md:right-8 lg:right-12 xl:right-16 2xl:right-20 w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
     <div className="px-4 py-3">
       <span className="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
       <span className="block text-sm text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>

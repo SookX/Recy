@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import Kitchen from "../img/lowpoly kitchen.png"
+import Spline from "@splinetool/react-spline";
 
 
 
@@ -23,7 +25,9 @@ export default function Home() {
     </div>
     
   </div>
-  <div className="relative max-md:-m-4 lg:w-full">Content here</div>
+  <div className="relative flex justify-center align-center max-md:-m-4  lg:w-full">
+    <img src={Kitchen.src} alt="" />
+  </div>
 
 </section>
 
