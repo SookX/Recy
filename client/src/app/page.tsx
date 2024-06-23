@@ -2,6 +2,8 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Kitchen from "../img/lowpoly kitchen.png"
 import Spline from "@splinetool/react-spline";
+import appStore from "../img/app store.png";
+import googlePlay from "../img/gp.png";
 
 
 
@@ -23,6 +25,8 @@ export default function Home() {
         Learn More
       </button>
     </div>
+    <img src={appStore.src} className="w-36"/>
+    
     
   </div>
   <div className="relative flex justify-center align-center max-md:-m-4  lg:w-full">
